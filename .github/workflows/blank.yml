@@ -13,6 +13,7 @@ jobs:
         run: echo Build is complete
   deploy:
     runs-on: ubuntu-latest
+    needs: build
     name: "Deploy staging"
     environment: staging
     steps:
