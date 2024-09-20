@@ -8,8 +8,11 @@ jobs:
   build:
     runs-in: [self-hosted, Linux, standard]
     name: "Test"
-    run: echo Test is complete
+    steps:
+      run: echo Build is complete
   deploy:
     runs-in: [self-hosted, Linux, standard]
     name: "Deploy staging"
     environment: staging
+    steps:
+      run: echo Deploy is complete
