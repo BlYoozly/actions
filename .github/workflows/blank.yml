@@ -6,13 +6,13 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, Linux, standard]
+    runs-on: ubuntu-latest
     name: "Test"
     steps:
       - name: build
         run: echo Build is complete
   deploy:
-    runs-on: [self-hosted, Linux, standard]
+    runs-on: ubuntu-latest]
     name: "Deploy staging"
     environment: staging
     steps:
