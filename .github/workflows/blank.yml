@@ -5,17 +5,25 @@ on:
     branches: ["main"]
 
 jobs:
-  build:
+  Build:
     runs-on: ubuntu-latest
-    name: "Test"
+    name: "Build"
     steps:
       - name: build
         run: echo Build is complete
-  deploy:
+  Deploy_Staging:
     runs-on: ubuntu-latest
-    needs: build
+    needs: Build
     name: "Deploy staging"
     environment: staging
     steps:
     - name: deploy on staging
+      run: echo Deploy is complete
+  Deploy_Preprod:
+    runs-on: ubuntu-latest
+    needs: Build
+    name: "Deploy preprod"
+    environment: preprod
+    steps:
+    - name: deploy on preprod
       run: echo Deploy is complete
