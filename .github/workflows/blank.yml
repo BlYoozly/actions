@@ -1,0 +1,15 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-in: [self-hosted, Linux, standard]
+    name: "Test"
+    run: echo Test is complete
+  deploy:
+    runs-in: [self-hosted, Linux, standard]
+    name: "Deploy staging"
+    environment: staging
