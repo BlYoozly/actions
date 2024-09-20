@@ -27,3 +27,11 @@ jobs:
     steps:
     - name: deploy on preprod
       run: echo Deploy is complete
+  Deploy_Prod:
+    runs-on: ubuntu-latest
+    needs: Build
+    name: "Deploy prod"
+    environment: preprod
+    steps:
+    - name: deploy on prod
+      run: echo Deploy is complete
