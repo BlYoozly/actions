@@ -41,4 +41,18 @@ jobs:
     name: "Flush cache staging"
     steps:
       - name: Flush cache
-        run: echo Flush cache is complete
+        run: echo Flush cache staging is complete
+  Flush_cache_Preprod:
+    runs-on: ubuntu-latest
+    needs: [Deploy_Preprod]
+    name: "Flush cache preprod"
+    steps:
+      - name: Flush cache
+        run: echo Flush cache preprod is complete
+  Flush_cache_Prod:
+    runs-on: ubuntu-latest
+    needs: [Deploy_Prod]
+    name: "Flush cache prod"
+    steps:
+      - name: Flush cache
+        run: echo Flush cache prod is complete
